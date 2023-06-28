@@ -11,10 +11,11 @@ from msrest.authentication import BasicAuthentication
 # organization_url = "https://dev.azure.com/{organizacion}"
 # personal_access_token = "{personal_access_token}"
 
-organizacion = 'Lambda-001Prueba'
-personal_access_token = 'l2sca5mtbqt6jp6swlekd5fjsxbv7otj5mvrj3a6heo6op3yo4ha'#all acces token 
+# Configura los detalles de autenticación
+organizacion = 'Name Organization'
+personal_access_token = 'Token'#all acces token 
 organization_url = f'https://dev.azure.com/{organizacion}'
-project_name = 'Prueba'
+project_name = 'ProjecName'
 
 
 # Crear la instancia de la conexión
@@ -25,7 +26,7 @@ connection = Connection(base_url=organization_url, creds=credentials)
 wit_client = connection.clients.get_work_item_tracking_client()
 
 # Definir el ID de la consulta en Azure DevOps
-query_id = "28882bbb-2f12-44ec-8787-618f4c8bd145"
+query_id = "query id"
 
 # Obtener los detalles de la consulta
 query_result = wit_client.query_by_id(query_id)
